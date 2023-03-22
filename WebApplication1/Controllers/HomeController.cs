@@ -18,8 +18,11 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Welcome(string name)
         {
+            ViewData["Message"] = !string.IsNullOrWhiteSpace(name) 
+                ? $"Hello, {name}!"
+                : "I don't know you!";
             return View();
         }
 
