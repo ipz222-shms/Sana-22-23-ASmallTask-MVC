@@ -1,7 +1,9 @@
 # Sana-ASmallTask-MVC
 
+**Done!**
+
 Small Task:
 
 1. MVC app
-1. Enter name
-1. Output Hello, {name}!
+2. Enter name
+3. Output Hello, {name}!
