@@ -1,8 +1,11 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Say Hello";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<form asp-action="Welcome" method="get">
+    <div class="d-flex flex-column gap-4 text-center fs-4">
+        <label for="name">ENTER YOUR NAME:</label>
+        <input required type="text" name="name" id="name" maxlength="128" placeholder="Name" />
+        <input type="submit" value="TRY ME" />
+    </div>
+</form>
