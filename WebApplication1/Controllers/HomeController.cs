@@ -18,12 +18,9 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        public IActionResult Welcome(string name)
+        public IActionResult Welcome(UserViewModel user)
         {
-            ViewData["Message"] = !string.IsNullOrWhiteSpace(name) 
-                ? $"Hello, {name}!"
-                : "I don't know you!";
-            return View();
+            return View(user);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

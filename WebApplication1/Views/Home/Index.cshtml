@@ -2,10 +2,11 @@
     ViewData["Title"] = "Say Hello";
 }
 
-<form asp-action="Welcome" method="get">
+@using (Html.BeginForm("Welcome", "Home", FormMethod.Post))
+{
     <div class="d-flex flex-column gap-4 text-center fs-4">
         <label for="name">ENTER YOUR NAME:</label>
         <input required type="text" name="name" id="name" maxlength="128" placeholder="Name" />
         <input type="submit" value="TRY ME" />
-    </div>
-</form>
+    </div> 
+}
